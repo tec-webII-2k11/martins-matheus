@@ -1,0 +1,89 @@
+﻿p{font-family: normal bold 12px/1.2em Arial, Verdana, Helvetica; font-size: 14pt; color: black;}
+
+.floatr{float: right; width: 80%;}
+
+.xv{width: 30%; float: left; margin: 50px}
+
+
+
+footer{text-align: right; font-size: 8pt; color: darkred;}
+
+h1{font-size: 42pt; text-align: center; color: darkred;}
+
+h2{text-align: center;color: darkred;}
+
+.arm{float: left; width: 30%; margin: 20px;}
+
+
+.x{clear: both}
+
+.logo{margin: auto; height: 200px; width: 100%}
+
+.home{float: left}
+
+.textohome{text-align: justify; margin: auto; font-size: 17pt}
+
+body{width: auto; height: auto; background-image: url(IMAGENS/background.jpg)}
+
+.tony{float: left; width: 50%}
+
+nav	{
+	width: 100%; /* Abrange toda a largura da pagina */
+	height: 50px; 
+	margin: 0; /* Retira os espacos entre a tela e o menu */
+	z-index: 99; /* Mantém o menu acima de outros elementos da pagina */
+	position: relative; 
+	background-color: ;
+    
+}
+.navbar	{
+	height: 50px;
+    padding: 0;
+	margin: 0;
+	position: absolute; /* Garante que menu nao afeta outros elementos da pagina */
+	border-right: 1px solid #54879d; 
+}
+.navbar li {
+	height: 50px   ;
+	width: 220px;  /* Cada item de menu terá 150px de largura */
+	float: left;  /* Organiza os itens de menu horizontalmente */
+	text-align: center;  /* Mantem o alinhamento de todo o texto no centro do box */
+	list-style: none;  /* Remove o estilo padrao da lista (bullets) */
+	font: normal bold 12px/1.2em Arial, Verdana, Helvetica;  
+	padding: 0;
+	margin: 0;
+	background-color:;
+    font-size: 15pt
+}
+
+.navbar a	{							
+	padding: 18px 0;  /* Adiciona padding na parte superior e inferior para que o texto fique centralizado verticalmente */
+	border-left: 1px solid ; /* Cria uma borda ligeiramente mais claro do que o tom de azul usado no fundo. Combinado com a borda direita, o que cria um efeito agradável. */
+	border-right: 1px solid ; /* Cria uma borda ligeiramente mais escura do que o tom de azul usado no fundo.  Combinado com a borda esquerda, o que cria um efeito agradável. */
+	text-decoration: none;  /* Remove o estilo padrao do hyperlink. */
+	color: darkred; /* Aplica cor de texto branco. */
+	display: block; /* Mostra os hiperlinks como blocos de elementos deixando toda a area clicavel e nao apenas os textos */
+}
+ .navbar li:hover, a:hover {
+	background-color: yellow; /* Novo tom de azul para o efeito mouse over */
+     color: darkred;
+} 
+ .filme {
+     text-align: center;
+ }
+
+.viloes {height: 300px;width: 500px; margin: 20px
+}
+.curi {height: 300px;width: 500px;
+    float: left; padding: 10px 25px 10px 0px;}
+    
+
+
+
+.listas ul li{list-style: none; float: left; margin: 50px}
+
+.imagem{ width: 25%; float: right;margin: 50px}
+
+a{text-decoration: underline; color: black;}
+
+.audio {float: right; padding: 30px}
