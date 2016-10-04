@@ -1,18 +1,22 @@
 # martins-matheus
 #Projeto do semestre Tema: 
 
-Público-alvo: 
+Projeto do semestre
 
-Objetivos do site: 
+Tema: Homem de Ferro (super-herói)
 
-Funcionalidades do site: 
+Público-alvo: Pessoas interessadas no herói 
 
-Usuário Administrador:
+Objetivos do site: Mostrar curiosidades e detalhes sobre o super-herói, como por exemplo os filmes, as armaduras, os vilões e etc.
 
-Usuário Logado: 
+Funcionalidades do site: Vizualizar as curiosidades do site, fazer cadastro, comentar sobre as curiosidades.
 
-Usuário Visitante: 
+Usuário Administrador: Remover e organizar os comentários.
 
-Mapa de Navegação: 
+Usuário Logado: Fazer comentários.
 
-Wireframe:
+Usuário Visitante: Navegar no site e ver os comentários dos usuários.
+
+Mapa de Navegação:
+
+Wireframe: 
