@@ -1,4 +1,4 @@
-<?php
+
 
 <SCRIPT language="JavaScript">
 
@@ -42,4 +42,4 @@
 // -->
 </SCRIPT>
             
-            ?>
+      

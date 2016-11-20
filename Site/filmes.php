@@ -11,12 +11,26 @@
             include "js.php";
         ?>
         <header>
-             <img class="logo" src="IMAGENS/logo.png" alt="logo homem de ferro">
          <?php
             include "menu.php";
         ?>
        
         </header>
+        <?php
+        session_start();
+        if((isset ($_SESSION['usuario']) == true) and (isset ($_SESSION['senha']) == true)) {
+            $logado = $_SESSION['usuario'];
+            echo "<br><h2>Bem vindo ".$logado."!</h2><br><center><a href='logout.php'>Logout</a></center>";
+            include "verificaadm.php";
+            if ($adm == true){
+                echo "<br><center><a href='paginaadm.php'>Página do Administrador</a></center>";;
+            }
+        }
+        
+            else {
+               include "login.php";
+            }
+         ?>
         <section>
                <br><br><br>
             <h1>FILMES</h1>
@@ -28,7 +42,7 @@
 
                 
                 <p class="tx">"Iron Man é um filme americano de 2008, baseado no personagem de mesmo nome da Marvel Comics. Dirigido por Jon Favreau, o filme é estrelado por Robert Downey Jr. como Tony Stark, presidente das "Indústrias Stark" que constrói uma armadura superpoderosa e se torna um super-herói tecnologicamente avançado, o Homem de Ferro. Gwyneth Paltrow interpreta a sua assistente pessoal, Pepper Potts, Terrence Howard interpreta o comandante militar James Rhodes e Jeff Bridges interpreta o executivo das Indústrias Stark Obadiah Stane. O filme estava em desenvolvimento desde 1990 na Universal Studios, 20th Century Fox e New Line Cinema, antes da Marvel Studios adquirir os direitos em 2006. Favreau assinou contrato para ser o diretor, dizendo que ia dar um toque de realismo ao filme, escolhendo filmar o filme principalmente na Califórnia. Durante as filmagens, os atores estavam livres para criar seus próprios diálogos, porque a pré-produção estava voltada para história e ação. Versões da armadura em borracha e metal, criadas pela empresa de Stan Winston, foram misturadas com imagens geradas por computador para gerar o personagem-título.</p>
-                <a href="curiosidadeshm1.html">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO</a>
+                <a href="curiosidadeshm1.php">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO</a>
             </article>
             
             <article class="filme">
@@ -37,7 +51,7 @@
                 
                 <p class="tx">Iron Man 2 é um filme norte-americano de 2010 baseado no personagem homônimo da Marvel Comics . É uma continuação de Homem de Ferro, de 2008, e é o segundo filme de uma trilogia planejada. Dirigido por Jon Favreau, é estrelado por Robert Downey, Jr. reprisa o papel de Tony Stark. Se passa seis meses depois de Homem Ferro e seus acontecimentos são simultâneos a Homem de Ferro e anteriores a Homem de Ferro 3. Neste filme, Stark revela sua identidade e resiste em entregar sua tecnologia para o exército americano. Enquanto isso, Ivan Vanko duplica a tecnologia do Homem de Ferro e cria uma nova arma de destruição trazendo problemas para Stark.
 </p>
-                <a href="curiosidadeshm2.html.">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO II</a>
+                <a href="curiosidadeshm2.php">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO II</a>
             </article>
             
             <article class="filme" id="vigadores">
@@ -49,13 +63,17 @@
                     <h2>HOMEM DE FERRO III</h2>
                     <img src="IMAGENS/iron3.jpg" alt="poster" width="400">
                     <p class="tx">Homem de Ferro 3 (no original em inglês Iron Man 3) é um filme de ação estadunidense de 2013, produzido pela Marvel Studios e distribuído pela Walt Disney Studios Motion Pictures, baseado no personagem fictício Homem de Ferro da Marvel Comics. É a continuação de Homem de Ferro e Homem de Ferro 2, e o sétimo no Universo Marvel Cinematográfico, sendo o primeiro grande lançamento da franquia desde que o filme Os Vingadores foi lançado. Shane Black foi definido para dirigir um roteiro que ele co-escreveu junto com Drew Pearce, do qual foi baseado no arco de histórias "Extremis" escrito por Warren Ellis. Jon Favreau, que dirigiu os dois primeiros filmes da trilogia Iron Man, esta agora como produtor executivo, juntamente com Kevin Feige. Robert Downey Jr. reprisa seu papel como o personagem-título, com Gwyneth Paltrow, Don Cheadle e Jon Favreau reprisando seus papéis como Pepper Potts, James Rhodes e Happy Hogan, respectivamente. Guy Pearce, Rebecca Hall, Stephanie Szostak, James Badge Dale e Ben Kingsley completam o elenco principal do filme.</p>
-                     <a href="curiosidadeshm3.html">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO III</a>
+                     <a href="curiosidadeshm3.php">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO III</a>
                 </article>
             
             </article>        
         </section>
         <footer>
-            <p>Desenvolvidor por Matheus Tuma Faccin e Victor Martins</p>
+            <?php
+                include "footer.php";
+            ?>
         </footer>
     </body>
 </html>
+
+<!--Martins-->
