@@ -10,15 +10,29 @@
         <?php
             include "js.php";
         ?>
+      
         <header>
-            <img class="logo" src="IMAGENS/logo.png" alt="logo homem de ferro">
              <?php
             include "menu.php";
         ?>
            
         </header>
+        <?php
+        session_start();
+        if((isset ($_SESSION['usuario']) == true) and (isset ($_SESSION['senha']) == true)) {
+            $logado = $_SESSION['usuario'];
+            echo "<br><h2>Bem vindo ".$logado."!</h2><br><center><a href='logout.php'>Logout</a></center>";
+            include "verificaadm.php";
+            if ($adm == true){
+                echo "<br><center><a href='paginaadm.php'>Página do Administrador</a></center>";;
+            }
+        }
+        
+            else {
+               include "login.php";
+            }
+         ?>
         <section>
-            <br><br><br>
             <h1 class="center">HOME</h1>
             <article>
                 <img class="home" src="IMAGENS/imagemhome2.png" alt="homem de ferro" height="400">
@@ -27,7 +41,9 @@
         </section> 
             <div class="x"></div>
         <footer>
-            <p>Desenvolvidor por Matheus Tuma Faccin e Victor Martins</p>
+            <?php
+                include "footer.php";
+            ?>
         </footer>
     </body>
 </html>

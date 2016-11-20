@@ -1,12 +1,13 @@
-﻿p{font-family: normal bold 12px/1.2em Arial, Verdana, Helvetica; font-size: 14pt; color: black;}
+p{font-family: normal bold 12px/1.2em Arial, Verdana, Helvetica; font-size: 14pt; color: black;}
 
-.floatr{float: right; width: 80%;}
 
 .xv{width: 30%; float: left; margin: 50px}
 
+.cad{text-align: right; float: right}
 
+.cade{text-align: center}
 
-footer{text-align: right; font-size: 8pt; color: darkred;}
+footer{text-align: center; font-size: 8pt; color: darkred;}
 
 h1{font-size: 42pt; text-align: center; color: darkred;}
 
@@ -87,3 +88,8 @@ nav	{
 a{text-decoration: underline; color: black;}
 
 .audio {float: right; padding: 30px}
+
+.textoadm{text-align: center;}
+
+/* phpmyadmin-ctl	install */
+/*aliados - armaduras - curiosidades 1 2 e 3, viloes*/

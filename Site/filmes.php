@@ -11,12 +11,26 @@
             include "js.php";
         ?>
         <header>
-             <img class="logo" src="IMAGENS/logo.png" alt="logo homem de ferro">
          <?php
             include "menu.php";
         ?>
        
         </header>
+        <?php
+        session_start();
+        if((isset ($_SESSION['usuario']) == true) and (isset ($_SESSION['senha']) == true)) {
+            $logado = $_SESSION['usuario'];
+            echo "<br><h2>Bem vindo ".$logado."!</h2><br><center><a href='logout.php'>Logout</a></center>";
+            include "verificaadm.php";
+            if ($adm == true){
+                echo "<br><center><a href='paginaadm.php'>Página do Administrador</a></center>";;
+            }
+        }
+        
+            else {
+               include "login.php";
+            }
+         ?>
         <section>
                <br><br><br>
             <h1>FILMES</h1>
@@ -37,7 +51,7 @@
                 
                 <p class="tx">Iron Man 2 é um filme norte-americano de 2010 baseado no personagem homônimo da Marvel Comics . É uma continuação de Homem de Ferro, de 2008, e é o segundo filme de uma trilogia planejada. Dirigido por Jon Favreau, é estrelado por Robert Downey, Jr. reprisa o papel de Tony Stark. Se passa seis meses depois de Homem Ferro e seus acontecimentos são simultâneos a Homem de Ferro e anteriores a Homem de Ferro 3. Neste filme, Stark revela sua identidade e resiste em entregar sua tecnologia para o exército americano. Enquanto isso, Ivan Vanko duplica a tecnologia do Homem de Ferro e cria uma nova arma de destruição trazendo problemas para Stark.
 </p>
-                <a href="curiosidadeshm2.php.">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO II</a>
+                <a href="curiosidadeshm2.php">VEJA 5 CRIOSIDADES SOBRE O FILME HOMEM DE FERRO II</a>
             </article>
             
             <article class="filme" id="vigadores">
@@ -55,7 +69,9 @@
             </article>        
         </section>
         <footer>
-            <p>Desenvolvidor por Matheus Tuma Faccin e Victor Martins</p>
+            <?php
+                include "footer.php";
+            ?>
         </footer>
     </body>
 </html>
